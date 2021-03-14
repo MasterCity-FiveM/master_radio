@@ -1,0 +1,257 @@
+html,
+body {
+	font-family: monospace;
+	font-size: 16px;
+	line-height: 1.6em;
+}
+
+@font-face {
+  font-family: diginum;
+  src: url("DS-DIGI.TTF");
+}
+
+#radioBox{
+    background-image: url('./images/radiobg.png');
+	background-repeat: no-repeat;
+	font-family: 'iransans', cursive;
+	background-size: 100% 100%;
+	width: 364px;
+	height: 626px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	top: 30%;
+	left: 70%;
+	margin-top: -250px;
+	margin-left: -400px;
+}
+
+.hide{
+	display:none;
+}
+
+.RadioChannel{
+	margin-top: 220px;
+	color: #000;
+	text-align: center;
+	width: 100%;
+	font-size: 42px;
+}
+
+#channel{
+	background: transparent;
+	border: none;
+	font-family: 'diginum';
+	text-align: center;
+	font-size: 52px;
+	width: 300px;
+}
+
+.RadioContent{
+	margin-top: 70px;
+	color: red;
+	text-align: center;
+	width: 100%;
+}
+
+#handle2{
+margin: 0px auto;
+}
+
+#handle2 .rs-handle  {
+    background-color: transparent;
+    border: 8px solid transparent;
+    border-right-color: #f0f0f0;
+    margin: -8px 0 0 14px !important;
+}
+
+#handle2 .rs-handle:before  {
+    display: block;
+    content: " ";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background: #f0f0f0;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 100%;
+}
+
+#handle2 .rs-handle:after  {
+    display: block;
+    content: " ";
+    width: 106px;
+    position: absolute;
+    top: -1px;
+    right: 0px;
+    border-top: 2px dotted #f0f0f0;
+}
+#handle2 .rs-range-color  {
+    background-color: #a60000;
+}
+#handle2 .rs-path-color  {
+    background-color: #b8b8b8;
+}
+
+.rs-bg-color{
+	background: #000;
+}
+
+.can-toggle {
+  position: relative;
+  font-family: "iransans";
+}
+.can-toggle *, .can-toggle *:before, .can-toggle *:after {
+  box-sizing: border-box;
+}
+.can-toggle input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.can-toggle input[type=checkbox][disabled] ~ label {
+  pointer-events: none;
+}
+.can-toggle input[type=checkbox][disabled] ~ label .can-toggle__switch {
+  opacity: 0.4;
+}
+.can-toggle input[type=checkbox]:checked ~ label .can-toggle__switch:before {
+  content: attr(data-unchecked);
+  left: 0;
+}
+.can-toggle input[type=checkbox]:checked ~ label .can-toggle__switch:after {
+  content: attr(data-checked);
+}
+.can-toggle label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.can-toggle label .can-toggle__label-text {
+  flex: 1;
+  padding-left: 32px;
+}
+.can-toggle label .can-toggle__switch {
+  position: relative;
+  margin: 10px auto;
+}
+.can-toggle label .can-toggle__switch:before {
+  content: attr(data-checked);
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.can-toggle label .can-toggle__switch:after {
+  content: attr(data-unchecked);
+  position: absolute;
+  z-index: 5;
+  text-transform: uppercase;
+  text-align: center;
+  background: white;
+  transform: translate3d(0, 0, 0);
+}
+
+.can-toggle.demo-rebrand-2 input[type=checkbox][disabled] ~ label {
+  color: rgba(68, 68, 68, 0.5);
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:focus ~ label .can-toggle__switch, .can-toggle.demo-rebrand-2 input[type=checkbox]:hover ~ label .can-toggle__switch {
+  background-color: #820000;
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:focus ~ label .can-toggle__switch:after, .can-toggle.demo-rebrand-2 input[type=checkbox]:hover ~ label .can-toggle__switch:after {
+  color: #2b2b2b;
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:hover ~ label {
+  color: #373737;
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:checked ~ label:hover {
+  color: #62b125;
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:checked ~ label .can-toggle__switch {
+  background-color: #75d32d;
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:checked ~ label .can-toggle__switch:after {
+  color: #5da924;
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:checked:focus ~ label .can-toggle__switch, .can-toggle.demo-rebrand-2 input[type=checkbox]:checked:hover ~ label .can-toggle__switch {
+  background-color: #69be28;
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:checked:focus ~ label .can-toggle__switch:after, .can-toggle.demo-rebrand-2 input[type=checkbox]:checked:hover ~ label .can-toggle__switch:after {
+  color: #52941f;
+}
+.can-toggle.demo-rebrand-2 label .can-toggle__label-text {
+  flex: 1;
+}
+.can-toggle.demo-rebrand-2 label .can-toggle__switch {
+  transition: background-color 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  background: #c92222;
+}
+.can-toggle.demo-rebrand-2 label .can-toggle__switch:before {
+  color: rgba(255, 255, 255, 0.7);
+}
+.can-toggle.demo-rebrand-2 label .can-toggle__switch:after {
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  color: #444;
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:focus ~ label .can-toggle__switch:after, .can-toggle.demo-rebrand-2 input[type=checkbox]:hover ~ label .can-toggle__switch:after {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:checked ~ label .can-toggle__switch:after {
+  transform: translate3d(58px, 0, 0);
+}
+.can-toggle.demo-rebrand-2 input[type=checkbox]:checked:focus ~ label .can-toggle__switch:after, .can-toggle.demo-rebrand-2 input[type=checkbox]:checked:hover ~ label .can-toggle__switch:after {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+.can-toggle.demo-rebrand-2 label {
+  font-size: 13px;
+}
+.can-toggle.demo-rebrand-2 label .can-toggle__switch {
+  height: 60px;
+  flex: 0 0 120px;
+  border-radius: 60px;
+}
+.can-toggle.demo-rebrand-2 label .can-toggle__switch:before {
+  left: 60px;
+  font-size: 13px;
+  line-height: 60px;
+  width: 60px;
+  padding: 0 12px;
+}
+.can-toggle.demo-rebrand-2 label .can-toggle__switch:after {
+  top: 2px;
+  left: 2px;
+  border-radius: 30px;
+  width: 58px;
+  line-height: 56px;
+  font-size: 13px;
+}
+.can-toggle.demo-rebrand-2 label .can-toggle__switch:hover:after {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.submit_button{
+	display:inline-block;
+	padding:0.3em 1.2em;
+	margin:0 0.3em 0.3em 0;
+	border-radius:2em;
+	box-sizing: border-box;
+	text-decoration:none;
+	font-family:'Roboto',sans-serif;
+	font-weight:300;
+	color:#FFFFFF;
+	background-color:#4eb5f1;
+	text-align:center;
+	transition: all 0.2s;
+	border: none;
+	font-family: 'iransans';
+}
+
+.submit_button:hover{
+	background-color:#4095c6;
+}
