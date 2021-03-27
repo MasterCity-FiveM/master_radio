@@ -42,6 +42,8 @@ function toggleShow(Open)
 	ISopen = Open
 	
 	if ISopen then
+		TriggerEvent("masterking32:closeAllUI")
+		Citizen.Wait(100)
 		SendNUIMessage({type = 'show'})
 		SetNuiFocus(true, true)
 	else
@@ -49,6 +51,12 @@ function toggleShow(Open)
 		SetNuiFocus(false, false)
 	end
 end
+
+RegisterNetEvent('masterking32:closeAllUI')
+AddEventHandler('masterking32:closeAllUI', function()
+	SendNUIMessage({type = 'hide'})
+	SetNuiFocus(false, false)
+end)
 
 RegisterNetEvent("master_radio:clear")
 AddEventHandler("master_radio:clear", function()
