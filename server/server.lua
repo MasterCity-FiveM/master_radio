@@ -13,6 +13,7 @@ function GetItemCount(source, item)
 end
 
 ESX.RegisterServerCallback('master_radio:hasRadio', function(source, cb)
+	ESX.RunCustomFunction("anti_ddos", source, 'master_radio:hasRadio', {})
 	local src = source
 	local xPlayer = ESX.GetPlayerFromId(src)
     if GetItemCount(source, 'radio') > 0 then
