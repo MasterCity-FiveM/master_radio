@@ -2,7 +2,7 @@ fx_version 'adamant'
 
 game 'gta5'
 
-description 'MasterkinG32 Custom codes'
+description 'MasterkinG32 Radio codes'
 
 version '1.0.0'
 
