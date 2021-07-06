@@ -66,8 +66,10 @@ AddEventHandler("master_radio:clear", function()
 	
 	RPower = false
 	RChannel = 0
-	exports["mumble-voip"]:SetRadioChannel(0)
-	exports["mumble-voip"]:SetMumbleProperty("radioEnabled", false)
+	exports["pma-voice"]:setVoiceProperty("radioEnabled", false)
+	exports["pma-voice"]:setRadioChannel(0)
+	--exports["mumble-voip"]:SetRadioChannel(0)
+	--exports["mumble-voip"]:SetMumbleProperty("radioEnabled", false)
 end)
 
 RegisterNetEvent("master_radio:open")
@@ -85,8 +87,11 @@ RegisterNUICallback('setdata', function(data)
 		RChannel = 0
 	end
 	
-	exports["mumble-voip"]:SetRadioChannel(RChannel)
-	exports["mumble-voip"]:SetMumbleProperty("radioEnabled", RPower)
+	exports["pma-voice"]:setVoiceProperty("radioEnabled", RPower)
+	exports["pma-voice"]:setRadioChannel(RChannel)
+	
+	--exports["mumble-voip"]:SetRadioChannel(RChannel)
+	--exports["mumble-voip"]:SetMumbleProperty("radioEnabled", RPower)
 	
 	toggleShow(false)
 end)
@@ -103,7 +108,8 @@ AddEventHandler("onClientResourceStart", function(resName)
 	if GetCurrentResourceName() ~= resName and "mumble-voip" ~= resName then
 		return
 	end
-	
-	exports["mumble-voip"]:SetMumbleProperty("radioClickMaxChannel", 999) -- Set radio clicks enabled for all radio frequencies
-	exports["mumble-voip"]:SetMumbleProperty("radioEnabled", false) -- Disable radio control
+	exports["mumble-voip"]:SetRadioChannel(0)
+	exports["mumble-voip"]:SetMumbleProperty("radioEnabled", false)
+	--exports["mumble-voip"]:SetMumbleProperty("radioClickMaxChannel", 999) -- Set radio clicks enabled for all radio frequencies
+	--exports["mumble-voip"]:SetMumbleProperty("radioEnabled", false) -- Disable radio control
 end)
