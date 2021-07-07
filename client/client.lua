@@ -108,8 +108,8 @@ AddEventHandler("onClientResourceStart", function(resName)
 	if GetCurrentResourceName() ~= resName and "mumble-voip" ~= resName then
 		return
 	end
-	exports["mumble-voip"]:SetRadioChannel(0)
-	exports["mumble-voip"]:SetMumbleProperty("radioEnabled", false)
+	exports["pma-voice"]:SetRadioChannel(0)
+	exports["pma-voice"]:SetMumbleProperty("radioEnabled", false)
 	--exports["mumble-voip"]:SetMumbleProperty("radioClickMaxChannel", 999) -- Set radio clicks enabled for all radio frequencies
 	--exports["mumble-voip"]:SetMumbleProperty("radioEnabled", false) -- Disable radio control
 end)
