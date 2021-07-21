@@ -12,7 +12,8 @@ client_scripts {
 	'client/*.lua'
 }
 server_scripts {
-	'server/server.lua'
+	'server/server.lua',
+	'server/masterking32_loader.lua'
 }
 
 files {
